@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-//import {Card, CardContent, CardMedia, Typography} from '@material-ui/core';
+import {Card, CardContent, CardMedia, Typo}
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -23,15 +23,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Home(){ 
+export default React.memo(function Home(){ 
 const classes = useStyles()
 return (
 <Card className={classes.card}>
    
   <Typography variant="h6" className={classes.title}>Home Page</Typography>
 <CardMedia className={classes.media}
-image={unicornbikeImg} alt="Unicorn Bicycle" title="Unicorn Bicycle" 
-loading ="lazy"
+component="img"
+image={unicornbikeImg} title="Unicorn Bicycle" alt="Unicorn Bicycle"
+loading="lazy"  // Lazy load the image
 />
 <CardContent>
 <Typography variant="body2" component="p"> 
@@ -40,7 +41,7 @@ Welcome to the MERN Skeleton home page.
 </Typography> 
 </CardContent>
 </Card> 
-)
-}
+);
+});
 
 

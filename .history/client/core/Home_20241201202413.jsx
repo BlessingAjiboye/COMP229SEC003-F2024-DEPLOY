@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {Suspense, Lazy} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-//import {Card, CardContent, CardMedia, Typography} from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
+import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
+//import Card from '@material-ui/core/Card';
+//import CardContent from '@material-ui/core/CardContent';
+//import CardMedia from '@material-ui/core/CardMedia';
+//import Typography from '@material-ui/core/Typography';
 import unicornbikeImg from './../assets/images/unicornbikeImg.jpg';
    
+const Home=lazy(()=>import)
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -30,8 +31,8 @@ return (
    
   <Typography variant="h6" className={classes.title}>Home Page</Typography>
 <CardMedia className={classes.media}
-image={unicornbikeImg} alt="Unicorn Bicycle" title="Unicorn Bicycle" 
-loading ="lazy"
+image={unicornbikeImg} title="Unicorn Bicycle" alt="Unicorn Bicycle"
+loading="lazy"  // Lazy load the image
 />
 <CardContent>
 <Typography variant="body2" component="p"> 

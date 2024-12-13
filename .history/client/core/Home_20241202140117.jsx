@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-//import {Card, CardContent, CardMedia, Typography} from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -31,7 +30,7 @@ return (
   <Typography variant="h6" className={classes.title}>Home Page</Typography>
 <CardMedia className={classes.media}
 image={unicornbikeImg} alt="Unicorn Bicycle" title="Unicorn Bicycle" 
-loading ="lazy"
+loading =
 />
 <CardContent>
 <Typography variant="body2" component="p"> 
